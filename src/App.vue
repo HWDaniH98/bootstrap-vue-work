@@ -1,5 +1,13 @@
 <template>
-  <div id="app" class="card"></div>
+  <div id="app" class="card">
+    <b-card
+      title = "B-card Page"
+    >
+      <b-card-text>
+        This a page with a b-card.
+      </b-card-text>
+    </b-card>
+  </div>
 </template>
 
 <script></script>
