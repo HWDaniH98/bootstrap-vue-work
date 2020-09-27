@@ -15,7 +15,7 @@
       <router-view/> -->
     </div>
     
-    <b-container>
+    <!--<b-container>
       <b-row align-v="center">
         <job-card v-for="job in displayJobs" :key="job.id" :name="job.name"></job-card>
       </b-row>
@@ -30,22 +30,26 @@
       next-text="Next"
       last-text="Last"
       @input ="paginate(currentPage)"
-    ></b-pagination>
+    ></b-pagination>-->
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import JobCard from "@/components/JobCard.vue";
+  //import JobCard from "@/components/JobCard.vue";
   import TopHeader from "@/components/TopHeader.vue";
+  //import Form from "@/components/Form.vue";
+
   export default
   {
     name: "home",
     components:
     {
-      "job-card" : JobCard,
+      //"job-card" : JobCard,
       "top-header" : TopHeader
     },
-    mounted()
+    /*mounted()
     {
       this.fetchData();
     },
@@ -76,7 +80,7 @@
         const start = (currentPage - 1) * this.perPage;
         this.displayJobs = this.jobs.slice(start, start + 3);
       }
-    }
+    }*/
   };
 </script>
 
